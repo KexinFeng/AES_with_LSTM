@@ -8,11 +8,11 @@ In 2012, the Hewlett Foundation sponsored a competition on Kaggle called the [Au
 
 However, most of the models by then were built with predefined features without machine learning features. With the fast development of machine learning in recent years, we want to construct a neural network model to solve the problem.
 
-Basic structure of LSTM model:
+<!-- Basic structure of LSTM model:
 <p align="center">
     <img src="./media/LSTM3-chain.png"><br/>
     <em>Basic structure of LSTM.</em>
-</p>
+</p> -->
 
 ## Task description and Data set
 Our goal is to build a model which takes in an essay and automatically return a score of that essay. We need to extract characteristics form the essays and build a multiclassification model that can grade each essay as close to the hand grade as possible.
@@ -51,19 +51,13 @@ hidden_size = 32 # the dimension of the hidden layer
 ```
 We use 2-layer LSTM cell.
 
-<object data="./media/lstm_noMPkappa.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="./media/lstm_noMPkappa.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
 <p align="center">
-    <img src="./media/lstm_noMPkappa.pdf"><br/>
+    <img src="./media/lstm_noMPkappa.png"><br/>
     <em>The comparison of the kappa score (QWK) between two-layer LSTM w/ and w/o MoT layer on the testing set.</em>
 </p>
 
 <p align="center">
-    <img src="./media/lstm_noMPloss.pdf"><br/>
+    <img src="./media/lstm_noMPloss.png"><br/>
     <em>The comparison of the loss function between two-layer LSTM w/ and w/o MoT layer.</em>
 </p>
 
