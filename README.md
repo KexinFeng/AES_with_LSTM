@@ -30,7 +30,7 @@ The general work flow is shown here:
 
 We applied NLTK package for preprocessing, including word stemming and tokenization. Then we applied Word2Vec for word embedding, which consists of CBOW and Skip-Gram and outputs the vector of the words by unsupervised learning. The embedding size is chosen to be 10. The following is an illustration of the embedded word vectors projected onto 2D space:
 <p align="center">
-    <img src="./media/workflow.png"><br/>
+    <img src="./media/word2vec_stemmed.png"><br/>
     <em>The word vector projected onto 2D space. Words have been stemmed. The number is the frequency of the word.</em>
 </p>
 It can be observed that, even after projection, the similar words, eg. {'in', 'to', 'on'}, {'friend', 'famili'} are located closely.
@@ -50,6 +50,12 @@ N_EPOCHS = 50
 hidden_size = 32 # the dimension of the hidden layer
 ```
 We use 2-layer LSTM cell.
+
+<object data="./media/lstm_noMPkappa.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="./media/lstm_noMPkappa.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 <p align="center">
     <img src="./media/lstm_noMPkappa.pdf"><br/>
