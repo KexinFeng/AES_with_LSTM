@@ -66,7 +66,7 @@ This improvement of performance after adding the MoT layer could be explained as
 
 The scores of a similar model[2] tested on the same data set is the following. The data we use corresponds to Prompts 1. So the performance of our model has basically achieved the same level as the model in this reference. 
 <p align="center">
-    <img width="500" height="300" src="./media/data.png"><br/>
+    <img width="800" height="300" src="./media/data.png"><br/>
     <em>The testing result from Ref[2]. Our model uses Prompt 1 data.</em>
 </p>
 
