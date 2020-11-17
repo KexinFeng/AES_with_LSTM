@@ -22,6 +22,7 @@ The ASAP competition provides 8 sets of essays, on average containing 1783 essay
 
 ## The description of the model
 
+### Work flow
 The general work flow is shown here:
 <p align="center">
     <img src="./media/workflow.png"><br/>
@@ -49,7 +50,7 @@ DROPOUT = 0.5 # the keep_prob
 N_EPOCHS = 50
 hidden_size = 32 # the dimension of the hidden layer
 ```
-We use 2-layer LSTM cell.
+We use 2-layer LSTM cell. The comparison of the kappa score (QWK) between two-layer LSTM with and without MoT layer on the testing set are shown below. The decrease of the loss function of the two models are also shown.
 
 <p align="center">
     <img width="460" height="300" src="./media/lstm_noMPkappa.png"><br/>
@@ -57,13 +58,15 @@ We use 2-layer LSTM cell.
 </p>
 
 <p align="center">
-    <img idth="460" height="300" src="./media/lstm_noMPloss.png"><br/>
+    <img idth="500" height="300" src="./media/lstm_noMPloss.png"><br/>
     <em>The comparison of the loss function between two-layer LSTM w/ and w/o MoT layer.</em>
 </p>
 
-
+This improvement of performance after adding the MoT layer could be explained as the following. Even though LSTM has the memorization state over the time, it is still assumed that the farther an element in the sequence is separated away from the last_output, the less correlated it will be with the last_output. Therefore, its feature will not be learned as much as elements near the last_output. This is the reason why bidirectional LSTM is applied. MoT layer helps collect the input of all elements in the sequence and treat them on the equal foot, thus help increase the performance. In this problem, the essay has 150 ~ 750 words, which is much longer sequence than sentences. So the MoT is helpful.
 
 ## Usage
+The main function is `essay_grading_MP.py`, while `essay_grading_update_MP_LN.py` is an implementation with layer normalization. `xgb_classify.py` is the baseline model which uses xgboost classifier.
 
-
-## Result
+## Citation
+[Automated Student Assessment Prize (ASAP)](https://www.kaggle.com/c/asap-aes)
+[A Neural Approach to Automated Essay Scoring](https://www.aclweb.org/anthology/D16-1193.pdf)
