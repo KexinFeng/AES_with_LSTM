@@ -64,10 +64,16 @@ We use 2-layer LSTM cell. The comparison of the kappa score (QWK) between two-la
 
 This improvement of performance after adding the MoT layer could be explained as the following. Even though LSTM has the memorization state over the time, it is still assumed that the farther an element in the sequence is separated away from the last_output, the less correlated it will be with the last_output. Therefore, its feature will not be learned as much as elements near the last_output. This is the reason why bidirectional LSTM is applied. MoT layer helps collect the input of all elements in the sequence and treat them on the equal foot, thus help increase the performance. In this problem, the essay has 150 ~ 750 words, which is much longer sequence than sentences. So the MoT is helpful.
 
+The scores of a similar model[2] tested on the same data set is the following. The data we use corresponds to Prompts 1. So the performance of our model has basically achieved the same level as the model in this reference. 
+<p align="center">
+    <img width="500" height="300" src="./media/data.png"><br/>
+    <em>The testing result from Ref[2]. Our model uses Prompt 1 data.</em>
+</p>
+
+
 ## Usage
 The main function is `essay_grading_MP.py`, while `essay_grading_update_MP_LN.py` is an implementation with layer normalization. `xgb_classify.py` is the baseline model which uses xgboost classifier.
 
 ## Reference
-[Automated Student Assessment Prize (ASAP)](https://www.kaggle.com/c/asap-aes)
-,
-[A Neural Approach to Automated Essay Scoring](https://www.aclweb.org/anthology/D16-1193.pdf)
+[1] [Automated Student Assessment Prize (ASAP)](https://www.kaggle.com/c/asap-aes) 
+[2] [A Neural Approach to Automated Essay Scoring](https://www.aclweb.org/anthology/D16-1193.pdf)
