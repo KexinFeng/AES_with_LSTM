@@ -31,7 +31,7 @@ The general work flow is shown here:
 
 We applied NLTK package for preprocessing, including word stemming and tokenization. Then we applied Word2Vec for word embedding, which consists of CBOW and Skip-Gram and outputs the vector of the words by unsupervised learning. The embedding size is chosen to be 10. The following is an illustration of the embedded word vectors projected onto 2D space:
 <p align="center">
-    <img width="1000" height="600" src="./media/word2vec_stemmed.png"><br/>
+    <img width="1000" height="450" src="./media/word2vec_stemmed.png"><br/>
     <em>The word vector projected onto 2D space. Words have been stemmed. The number is the frequency of the word.</em>
 </p>
 It can be observed that, even after projection, the similar words, eg. {'in', 'to', 'on'}, {'friend', 'famili'} are located closely.
