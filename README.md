@@ -69,4 +69,5 @@ The main function is `essay_grading_MP.py`, while `essay_grading_update_MP_LN.py
 
 ## Reference
 [Automated Student Assessment Prize (ASAP)](https://www.kaggle.com/c/asap-aes)
+
 [A Neural Approach to Automated Essay Scoring](https://www.aclweb.org/anthology/D16-1193.pdf)
