@@ -51,13 +51,13 @@ hidden_size = 32 # the dimension of the hidden layer
 ```
 We use 2-layer LSTM cell.
 
-<p align="center" width="600" height="200">
-    <img src="./media/lstm_noMPkappa.png"><br/>
+<p align="center">
+    <img width="460" height="300" src="./media/lstm_noMPkappa.png"><br/>
     <em>The comparison of the kappa score (QWK) between two-layer LSTM w/ and w/o MoT layer on the testing set.</em>
 </p>
 
-<p align="center" width="60" height="20">
-    <img src="./media/lstm_noMPloss.png"><br/>
+<p align="center">
+    <img idth="460" height="300" src="./media/lstm_noMPloss.png"><br/>
     <em>The comparison of the loss function between two-layer LSTM w/ and w/o MoT layer.</em>
 </p>
 
