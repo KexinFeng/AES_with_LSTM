@@ -67,6 +67,6 @@ This improvement of performance after adding the MoT layer could be explained as
 ## Usage
 The main function is `essay_grading_MP.py`, while `essay_grading_update_MP_LN.py` is an implementation with layer normalization. `xgb_classify.py` is the baseline model which uses xgboost classifier.
 
-## Citation
+## Reference
 [Automated Student Assessment Prize (ASAP)](https://www.kaggle.com/c/asap-aes)
 [A Neural Approach to Automated Essay Scoring](https://www.aclweb.org/anthology/D16-1193.pdf)
